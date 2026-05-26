@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --pm-canvas: #ffffff;
+  --pm-surface: #f7f8fa;
+  --pm-surface-card: #ffffff;
+  --pm-surface-blue: #f3f7ff;
+  --pm-ink: #18181b;
+  --pm-body: #4b5563;
+  --pm-muted: #77808d;
+  --pm-muted-soft: #96aab4;
+  --pm-hairline: #e6e8ea;
+  --pm-hairline-strong: #d7dce2;
+  --pm-blue: #1452f0;
+  --pm-blue-active: #0c4fe4;
+  --pm-blue-soft: #eaf1ff;
+  --pm-yes: #00b955;
+  --pm-yes-soft: #e9f9ef;
+  --pm-no: #e64800;
+  --pm-no-soft: #fff0e8;
+  --pm-warning: #b8952e;
+  --pm-warning-soft: #fff7df;
+  --pm-shadow-card: 0 14px 34px rgba(15, 23, 42, 0.07);
+  --pm-shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--pm-surface);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(20, 82, 240, 0.08), transparent 26rem),
+    linear-gradient(180deg, var(--pm-canvas) 0%, var(--pm-surface) 52%, var(--pm-canvas) 100%);
+  color: var(--pm-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(20, 82, 240, 0.28);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(20, 82, 240, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
